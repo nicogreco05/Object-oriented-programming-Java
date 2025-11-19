@@ -1,17 +1,14 @@
-public class Main{
-    public static void main(String[] args){
-        ClassificaImp classifica = new ClassificaImp();
-        Atleta atleta1 = new Atleta("Nicolò", 50.0);
-        Atleta atleta4 = new Atleta("Pino", 48.0);
-        Atleta atleta5 = new Atleta("Totti", 49.0);
-        System.out.println(classifica.aggiungiAtleta(atleta1));
-        System.out.println(classifica.aggiungiAtleta(atleta4));
-        System.out.println(classifica.aggiungiAtleta(atleta5));
-        Atleta atleta6 = new Atleta("Sesko", 33.0);
-        System.out.println(classifica.rimuoviAtleta(atleta6));
-        System.out.println(classifica.stampaClassifica());
+import java.util.HashMap;
 
+public class Main {
+    public void main(String[] args){
+        RubricaImpl rub = new RubricaImpl();
+        System.out.println(rub.aggiungiContatto("Silvio", "3335363210"));
+        System.out.println(rub.aggiungiContatto("Mario", "3335363211"));
+        System.out.println(rub.aggiungiContatto("Pino", "3335363212"));
+        System.out.println(rub.aggiungiContatto("Matteo", "3335363213"));
+        System.out.println(rub.aggiungiContatto("Nicolò", "3335363214"));
 
-
+        System.out.println(rub.stampaRubrica());
     }
 }
