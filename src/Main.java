@@ -1,14 +1,18 @@
-import java.util.HashMap;
-
 public class Main {
     public void main(String[] args){
-        RubricaImpl rub = new RubricaImpl();
-        System.out.println(rub.aggiungiContatto("Silvio", "3335363210"));
-        System.out.println(rub.aggiungiContatto("Mario", "3335363211"));
-        System.out.println(rub.aggiungiContatto("Pino", "3335363212"));
-        System.out.println(rub.aggiungiContatto("Matteo", "3335363213"));
-        System.out.println(rub.aggiungiContatto("Nicolò", "3335363214"));
+        StoricoAccessiImp storicosccessi = new StoricoAccessiImp();
+        Utente utente1 = new Utente("Silvio", "16/10");
+        Utente utente2 = new Utente("Nico", "17/10");
+        Utente utente3 = new Utente("Mario", "18/10");
+        System.out.println(storicosccessi.aggiungiEvento(utente1));
+        System.out.println(storicosccessi.aggiungiEvento(utente2));
+        System.out.println(storicosccessi.aggiungiEvento(utente3));
+        System.out.println(storicosccessi.visualizzaStorico());
+        Utente utente4 = new Utente("Pino", "19/10");
+        System.out.println(storicosccessi.aggiungiEvento(utente4));
+        storicosccessi.rimuoviEvento();
+        System.out.println(storicosccessi.visualizzaStorico());
+        System.out.println((storicosccessi.cercaEvento(utente3)));
 
-        System.out.println(rub.stampaRubrica());
     }
 }
