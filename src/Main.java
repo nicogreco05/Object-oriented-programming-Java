@@ -1,18 +1,17 @@
-public class Main {
-    public void main(String[] args){
-        StoricoAccessiImp storicosccessi = new StoricoAccessiImp();
-        Utente utente1 = new Utente("Silvio", "16/10");
-        Utente utente2 = new Utente("Nico", "17/10");
-        Utente utente3 = new Utente("Mario", "18/10");
-        System.out.println(storicosccessi.aggiungiEvento(utente1));
-        System.out.println(storicosccessi.aggiungiEvento(utente2));
-        System.out.println(storicosccessi.aggiungiEvento(utente3));
-        System.out.println(storicosccessi.visualizzaStorico());
-        Utente utente4 = new Utente("Pino", "19/10");
-        System.out.println(storicosccessi.aggiungiEvento(utente4));
-        storicosccessi.rimuoviEvento();
-        System.out.println(storicosccessi.visualizzaStorico());
-        System.out.println((storicosccessi.cercaEvento(utente3)));
+public class Main{
+    public static void main(String[] args){
+        ClassificaImp classifica = new ClassificaImp();
+        Atleta atleta1 = new Atleta("Nicolò", 50.0);
+        Atleta atleta4 = new Atleta("Pino", 48.0);
+        Atleta atleta5 = new Atleta("Totti", 49.0);
+        System.out.println(classifica.aggiungiAtleta(atleta1));
+        System.out.println(classifica.aggiungiAtleta(atleta4));
+        System.out.println(classifica.aggiungiAtleta(atleta5));
+        Atleta atleta6 = new Atleta("Sesko", 33.0);
+        System.out.println(classifica.rimuoviAtleta(atleta6));
+        System.out.println(classifica.stampaClassifica());
+
+
 
     }
 }
